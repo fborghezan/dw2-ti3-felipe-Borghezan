@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: rgb(81, 126, 250);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 0 50px;
+    align-items: center;
+    color: aliceblue;
+    height: 9vh;
+    width: 100vw;
+}
+.cabecalho{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+.logo{
+    height: 50px;
+    width: auto;
+}
+menu{
+    display: flex;
+    gap: 20px;
+    font-size: large;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "titulo titulo titulo fundo fundo fundo"
+    "desc desc desc fundo fundo fundo"
+    "frase frase . cx1 cx2 cx3"
+    ;
+    background-color: rgb(81, 126, 250);
+    height: 100%;
+    gap: 20px;
+    color: white;
+    padding: 3vh 5vw ;
+}
+.frase{
+    grid-area: frase;
+    font-size: 30px;
+    margin-right: 7vw;
+}
+.titulo{
+    grid-area: titulo;
+    font-size: 60px;
+}
+.fundo{
+    grid-area: fundo;
+    
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+.imgFundo{
+    height: 550px;
+    width: 700px;
+}
+.botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "esq dir"
+    ;
+    gap: 10px;
+    height: 5vh;
+    margin-top: 7vh;
+}
+.btnEsquerda{
+    grid-area: esq;
+    background-color: #ff9500;
+    color: white;
+    border-width: 0;
+    border-radius: 10px;
+    font-size: large;
+}
+.btnDireita{
+    grid-area: dir;
+    border-radius: 10px;
+    background-color: #ff950000;
+    border-width: 5px;
+    border-color: #FFFFFF;
+    font-size: large;
+    color: white;
+}
+.desc{
+    grid-area: desc;
+    padding-right: 15vw;
+}
+.frase{
+    grid-area: frase;
+    padding-top:20px;
+}
+.cx1, .cx2, .cx3{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 20px;
+    border: 5px solid #FFFFFF;
+    flex-direction: column;
+    height: 70%;
+}
+.cx1{
+    grid-area: cx1;
+}
+.cx2{
+    grid-area:cx2;
+}
+.cx3{
+    grid-area:cx3;
+}
+.mini{
+    height: 12vh;
+    width: 15vh;
+    margin-bottom: 3vh;
+}
+
+@media (max-width: 768px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr 1fr;
+        grid-template-areas:
+        "fundo fundo fundo"
+        "titulo titulo titulo"
+        "desc desc desc"
+        "frase frase frase"
+        "cx1 cx2 cx3"
+        ;
+        height: auto;
+        gap: 20px;
+        color: white;
+        padding: 3vh 5vw ;
+        justify-items: center;
+    }
+    .imgFundo{
+        height: 100%;
+        width: 100%;
+    }
+    .titulo{
+        font-size: 30px;
+        margin-bottom: -100px;
+    }
+    .desc{
+        padding:0;
+        margin-top: -100px;
+    }
+    .cx1, .cx2, .cx3{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 20px;
+        border: 5px solid #FFFFFF;
+        flex-direction: column;
+        width: 100%;
+        height: 75%;
+
+    }
+    .frase{
+        font-size: 25px;
+        text-align: center;
+  
+    }
+    header{
+        height: 100%;
+    }
+    
+}
+@media (max-width: 426px){
+    menu{
+        
+        margin-top: 20px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .imgFundo{
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+    .titulo{
+        margin-bottom: 100px;
+    }
+
+}
+@media (max-width: 320px){
+    menu{
+        flex-direction: column;
+    }
+}
