@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 25vh;
+    color: aliceblue;
+    background-color: rgb(26, 27, 108);
+    gap: 2vh;
+    justify-content: center;
+}
+h1{
+    font-size: 50px;
+}
+p{
+    font-size: 20px ;
+}
+.container{
+
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+    grid-template-areas: 
+    "segunda oitavas quartas"
+    ;
+    padding: 5vh 5vw; 
+    background-color: rgb(25, 25, 32);
+}
+.segunda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: segunda;
+    padding: 0 5vh;
+    text-align: center;
+}
+.oitavas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: oitavas;
+    padding: 0 5vh;
+    text-align: center;
+}
+.quartas{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: quartas;
+    padding: 0 5vh;
+    text-align: center;
+}
+.times{
+    background-color: rgb(63, 62, 71);
+    padding-left: 5px;
+    border-radius: 10px;
+    height: 15vh;
+    margin-bottom: 2px;
+}
+.times:hover{
+    background-color: yellow;
+}
+.time{
+    display: flex;
+    background-color: rgb(63, 62, 71);
+    padding-left: 5px;
+    height: 50%;
+    font-size: 26px;
+    align-items: center;
+    color: aliceblue;
+}
+h2{
+    margin-bottom: 5vh;
+    color: aqua;
+    font-size: 35px;
+}
+
+@media (max-width: 1100px){
+    .container{
+
+    display: flex;
+    flex-direction: column;
+
+}
+}
